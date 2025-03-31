@@ -1,0 +1,508 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.main {
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.35s ease-in-out;
+  background-color: #fafbfe;
+}
+
+#sidebar {
+  width: 70px;
+  min-width: 70px;
+  z-index: 1000;
+  transition: all 0.25s ease-in-out;
+  background-color: #0e2238;
+  display: flex;
+  flex-direction: column;
+}
+.menu-sidbar {
+}
+#sidebar.expand {
+  width: 260px;
+  min-width: 260px;
+}
+
+.toggle-btn {
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+  padding: 1rem 1.5rem;
+}
+
+.toggle-btn i {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.sidebar-logo {
+  margin: auto 0;
+}
+
+.sidebar-logo a {
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+#sidebar:not(.expand) .sidebar-logo,
+#sidebar:not(.expand) a.sidebar-link span {
+  display: none;
+}
+
+.sidebar-nav {
+  padding: 2rem 0;
+  flex: 1 1 auto;
+}
+
+a.sidebar-link {
+  padding: 0.625rem 1.625rem;
+  color: #fff;
+  display: block;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  border-left: 3px solid transparent;
+}
+
+.sidebar-link i {
+  font-size: 1.1rem;
+  margin-right: 0.75rem;
+}
+
+a.sidebar-link:hover {
+  background-color: rgba(255, 255, 255, 0.075);
+  border-left: 3px solid #3b7ddd;
+}
+
+.sidebar-item {
+  position: relative;
+}
+
+#sidebar:not(.expand) .sidebar-item .sidebar-dropdown {
+  position: absolute;
+  top: 0;
+  left: 70px;
+  background-color: #0e2238;
+  padding: 0;
+  min-width: 15rem;
+  display: none;
+}
+
+#sidebar:not(.expand) .sidebar-item:hover .has-dropdown + .sidebar-dropdown {
+  display: block;
+  max-height: 15em;
+  width: 100%;
+  opacity: 1;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"]::after {
+  border: solid;
+  border-width: 0 0.075rem 0.075rem 0;
+  content: "";
+  display: inline-block;
+  padding: 2px;
+  position: absolute;
+  right: 1.5rem;
+  top: 1.4rem;
+  transform: rotate(-135deg);
+  transition: all 0.2s ease-out;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"].collapsed::after {
+  transform: rotate(45deg);
+  transition: all 0.2s ease-out;
+}
+
+#Dashboard {
+  /* display: none; */
+
+  width: 100%;
+}
+.background {
+  width: 100%;
+  background-color: rgb(255, 249, 249);
+  padding: 10px;
+  padding-bottom: 50px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 5px 1px rgb(116, 116, 116, 0.067);
+}
+.background .Dashboard {
+  width: 250px;
+  background-color: #1266e4c0;
+  height: 130px;
+  border-radius: 20px;
+  margin-top: 20px;
+  float: left;
+  margin-left: 20px;
+  position: relative;
+  bottom: 30px;
+  top: 5px;
+}
+.background .Dashboard .icon {
+  width: 100px;
+  position: absolute;
+  right: 10px;
+  top: 30px;
+}
+.background .Dashboard .amountProduct {
+  width: 200px;
+  /* background-color: #055e20; */
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+.background .Dashboard .icon i {
+  font-size: 60px;
+  color: rgba(3, 112, 3, 0.31);
+}
+.background .Dashboard .amountProduct h1 {
+  margin-left: 1px;
+  margin-bottom: 0;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.718);
+  margin-right: 150px;
+}
+.background .Dashboard .amountProduct p {
+  font-size: 20px;
+  margin: auto;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.718);
+  float: left;
+}
+.background .Dashboard .styledashboard {
+  width: 100%;
+  position: absolute;
+  height: 30px;
+  background-color: #007f2c54;
+  bottom: 0px;
+  border-radius: 0px 0px 20px 20px;
+  text-align: center;
+}
+.background .Dashboard .styledashboard a {
+  color: white;
+  text-decoration: none;
+  transition: 0.5s;
+  font-size: 13px;
+}
+.background .Dashboard .styledashboard a:hover {
+  font-size: 15px;
+  opacity: 0.8;
+}
+.background .Dashboard .styledashboard i {
+  padding-left: 5px;
+  padding-top: 3px;
+}
+.background .CategoryDashboard {
+  width: 250px;
+  background-color: #007f2cc1;
+  height: 130px;
+  border-radius: 20px;
+  margin-top: 20px;
+  float: left;
+  margin-left: 20px;
+  position: relative;
+  bottom: 30px;
+  top: 5px;
+}
+
+.background .CategoryDashboard .icon {
+  width: 100px;
+  position: absolute;
+  right: 10px;
+  top: 30px;
+}
+.background .CategoryDashboard .icon i {
+  font-size: 60px;
+  color: rgba(3, 112, 3, 0.31);
+}
+.background .CategoryDashboard .styleCategory a {
+  color: white;
+  text-decoration: none;
+  transition: 0.5s;
+  font-size: 13px;
+}
+.background .CategoryDashboard .styleCategory a:hover {
+  font-size: 15px;
+  opacity: 0.8;
+}
+.background .CategoryDashboard .styleCategory i {
+  padding-left: 5px;
+  padding-top: 3px;
+}
+.background .CategoryDashboard .amountProduct {
+  width: 200px;
+  /* background-color: #055e20; */
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+.background .CategoryDashboard .amountProduct h1 {
+  margin-left: 0px;
+  margin-right: 150px;
+  margin-bottom: 0;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.718);
+}
+.background .CategoryDashboard .amountProduct p {
+  font-size: 20px;
+  margin: auto;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.718);
+  float: left;
+}
+.background .CategoryDashboard .styleCategory {
+  width: 100%;
+  position: absolute;
+  height: 30px;
+  background-color: #007f2c;
+  bottom: 0px;
+  border-radius: 0px 0px 20px 20px;
+  text-align: center;
+}
+.background .User {
+  width: 250px;
+  background-color: #ff0404c0;
+  height: 130px;
+  border-radius: 20px;
+  margin-top: 20px;
+  float: left;
+  margin-left: 20px;
+  position: relative;
+  bottom: 30px;
+  top: 5px;
+}
+.background .User .Userdashboard {
+  text-align: center;
+}
+.background .User .Userdashboard a {
+  color: white;
+  text-decoration: none;
+  transition: 0.5s;
+  font-size: 13px;
+}
+.background .User .Userdashboard a:hover {
+  font-size: 15px;
+  opacity: 0.8;
+}
+.background .User .Userdashboard i {
+  padding-left: 5px;
+  padding-top: 3px;
+}
+
+.background .User .icon {
+  width: 100px;
+  position: absolute;
+  right: 10px;
+  top: 30px;
+}
+.background .User .icon i {
+  font-size: 60px;
+  color: rgba(3, 112, 3, 0.31);
+}
+.background .User .amountProduct {
+  width: 200px;
+  /* background-color: #055e20; */
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+.background .User .amountProduct h1 {
+  margin-left: 0px;
+  margin-bottom: 0;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.718);
+  margin-right: 150px;
+}
+.background .User .amountProduct p {
+  font-size: 20px;
+  margin: auto;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.718);
+  float: left;
+}
+
+.background .User .Userdashboard {
+  width: 100%;
+  position: absolute;
+  height: 30px;
+  background-color: rgba(127, 0, 0, 0.505);
+  bottom: 0px;
+  border-radius: 0px 0px 20px 20px;
+}
+.background .DashboardOrder {
+  width: 250px;
+  background-color: #ff0404c0;
+  height: 130px;
+  border-radius: 20px;
+  margin-top: 20px;
+  float: left;
+  margin-left: 20px;
+  position: relative;
+  bottom: 30px;
+  top: 5px;
+}
+
+.background .DashboardOrder .icon {
+  width: 100px;
+  position: absolute;
+  right: 10px;
+  top: 30px;
+}
+.background .DashboardOrder .icon i {
+  font-size: 60px;
+  color: rgba(3, 112, 3, 0.31);
+}
+.background .DashboardOrder .StyleOrder {
+  text-align: center;
+}
+.background .DashboardOrder .StyleOrder a {
+  color: white;
+  text-decoration: none;
+  transition: 0.5s;
+  font-size: 13px;
+}
+.background .DashboardOrder .StyleOrder a:hover {
+  font-size: 15px;
+  opacity: 0.8;
+}
+.background .DashboardOrder .StyleOrder i {
+  padding-left: 5px;
+  padding-top: 3px;
+}
+
+.background .DashboardOrder .amountProduct {
+  width: 200px;
+  /* background-color: #055e20; */
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+.background .DashboardOrder .amountProduct h1 {
+  margin-left: 0px;
+  margin-bottom: 0;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.718);
+  margin-right: 150px;
+}
+.background .DashboardOrder .amountProduct p {
+  font-size: 20px;
+  margin: auto;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.718);
+  float: left;
+}
+
+.background .DashboardOrder .StyleOrder {
+  width: 100%;
+  position: absolute;
+  height: 30px;
+  background-color: rgba(127, 0, 97, 0.334);
+  bottom: 0px;
+  border-radius: 0px 0px 20px 20px;
+}
+.background .DashboardOrder {
+  background-color: #ffb700f1;
+}
+.background1 {
+  width: 49%;
+  background-color: rgb(255, 249, 249);
+  padding: 15px;
+  padding-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 5px 1px rgba(116, 116, 116, 0.067);
+  margin-top: 10px;
+  margin-left: 0px;
+  float: left;
+}
+.background2 {
+  width: 50%;
+  background-color: rgb(255, 249, 249);
+  padding: 15px;
+  padding-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 5px 1px rgba(116, 116, 116, 0.067);
+  margin-top: 10px;
+  margin-left: 0px;
+  float: left;
+  margin-left: 1%;
+}
+.background2 th {
+  background-color: rgba(0, 149, 255, 0.366);
+}
+.background2 caption {
+  text-align: center;
+}
+.text-center {
+  /* background-color: #007f2c; */
+  padding: 0;
+  padding-left: 0;
+}
+
+.background2 tbody tr .profile {
+  width: 50px;
+  height: 50px;
+  /* background-color: pink; */
+  border-radius: 2000px;
+}
+.background2 tbody tr .profile img {
+  object-fit: cover;
+  height: 40px;
+  width: 40px;
+  border-radius: 2000px;
+}
+.background2 tbody tr .info {
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px;
+  width: 70px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.container1 {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

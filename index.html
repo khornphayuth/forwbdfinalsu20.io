@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project</title>
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Style/newstyle.css">
+    <link rel="stylesheet" href="./Style/AddproductStyle.css">
+    <link rel="stylesheet" href="./Style/category.css">
+    <link rel="icon" href="./img/pngtree-test-orange-icon-sign-test-testing-vector-picture-image_9551097.png">
+</head>
+
+<body>
+    <div class="wrapper">
+        <aside id="sidebar">
+            <div class="d-flex">
+                <button class="toggle-btn" type="button" onclick="btn()">
+                    <i class="lni lni-grid-alt"></i>
+                </button>
+                <div class="sidebar-logo">
+                    <a href="#">Final Project</a>
+                </div>
+            </div>
+            <ul class="sidebar-nav">
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link" onclick="DashboardBTn()">
+                      <i class="fa-solid fa-gauge"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <span>Product</span>
+                    </a>
+                    <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link" onclick="ProductBtn()"><i class="fa-solid fa-plus"></i>Add PRoduct</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#listProduct" class="sidebar-link" onclick="ProductBtn()"><i class="fa-solid fa-list"></i>List Product</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#multi" aria-expanded="false" aria-controls="multi">
+                        <i class="lni lni-layout"></i>
+                        <span>Category</span>
+                    </a>
+                    <ul id="multi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                      <li class="sidebar-item">
+                        <a href="#" class="sidebar-link" onclick="CategoryBtn()"><i class="fa-solid fa-plus"></i>Add Category</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link" onclick=""><i class="fa-solid fa-list"></i>List Category</a>
+                    </li>
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#orderMenu" aria-expanded="false" aria-controls="orderMenu">
+                        <i class="lni lni-popup"></i>
+                        <span>Orders</span>
+                    </a>
+                    <ul id="orderMenu" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link" onclick="AddOrderBtn()">
+                                <i class="fa-solid fa-plus"></i> Add Order
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link" onclick="ListOrderBtn()">
+                                <i class="fa-solid fa-list"></i> List Order
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"  onclick="SettingBtn()">
+                        <i class="lni lni-cog"></i>
+                        <span>Setting</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <a href="#" class="sidebar-link">
+                    <i class="lni lni-exit"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+        <!-- DashboardForm -->
+
+        <div class="main p-3" >
+            <div class="text-center" id="Dashboard">
+                <div class="container" id="formdashboard">
+                    <div class="row">
+                        <div class="col-12 background">
+                            <h1 class="title">Dashboard</h1>
+                            <div class="Dashboard">
+                                
+                                <div class="styledashboard">
+                                    <a href="">More info<i class="fa-solid fa-arrow-right"></i></a>
+                                </div>
+                                <div class=" icon">
+                                    <i class="fa-solid fa-dumpster"></i>    
+                                </div>
+                                <div class="amountProduct">
+                                    <h1>200</h1>
+                                    <p>Product</p>
+                                </div>
+                            </div>
+                            <div class="CategoryDashboard">
+                                <div class="styleCategory"><a href="">More info<i class="fa-solid fa-arrow-right"></i></a></div>
+                                <div class=" icon">
+                                    <i class="fa-solid fa-calendar-days"></i>  
+                                </div>
+                                <div class="amountProduct">
+                                    <h1>200</h1>
+                                    <p>Category</p>
+                                </div>
+                            </div>
+                            <div class="DashboardOrder">
+                                <div class="StyleOrder"><a href="">More info<i class="fa-solid fa-arrow-right"></i></a></div>
+                                <div class=" icon">
+                                    <i class="fa-solid fa-cart-shopping"></i> 
+                                </div>
+                                <div class="amountProduct">
+                                    <h1>200</h1>
+                                    <p>Orders</p>
+                                </div>
+                            </div>
+                            <div class="User">
+                                <div class="Userdashboard"><a href="">More info<i class="fa-solid fa-arrow-right"></i></a></div>
+                                <div class=" icon">
+                                    <i class="fa-solid fa-users"></i> 
+                                </div>
+                                <div class="amountProduct">
+                                    <h1>200</h1>
+                                    <p>User</p>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="col-12 background1">
+                            <canvas id="acquisitions"></canvas>
+                          </div>
+                          <div class="col-12 background2">
+                            <table class="table caption-top">
+                                <caption>List of users</caption>
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Profile</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Email</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td scope="row" class="profile"><img src="./img/pngtree-test-orange-icon-sign-test-testing-vector-picture-image_9551097.png" alt=""></th>
+                                    <td class="info">Sovann</td>
+                                    <td class="">Chhorn</td>
+                                    <td>@Sovann@gmail.com</td>
+                                  </tr>
+                                  <tr>
+                                    <td scope="row" class="profile"><img src="./img/pngtree-test-orange-icon-sign-test-testing-vector-picture-image_9551097.png" alt=""></th>
+                                    <td>Vannchhai</td>
+                                    <td>Nim </td>
+                                    <td>@vannchhai@gmail.com</td>
+                                  </tr>
+                                  <tr>
+                                    <td scope="row" class="profile"><img src="./img/pngtree-test-orange-icon-sign-test-testing-vector-picture-image_9551097.png" alt=""></th>
+                                    <td>Davan</td>
+                                    <td>On Rachana</td>
+                                    <td>@Davan@gmail.com</td>
+                                  </tr>
+                                  <tr>
+                                    <td scope="row" class="profile"><img src="./img/pngtree-test-orange-icon-sign-test-testing-vector-picture-image_9551097.png" alt=""></th>
+                                    <td>Davit</td>
+                                    <td>Prum</td>
+                                    <td>@Davit@gmail.com</td>
+                                  </tr>
+                                  
+                                </tbody>
+                              </table>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container1 mt-5" id="Addproduct" style="display: none;">
+          <h2 class="text-center">Add Product</h2>
+          <div class="BtnAdd">
+              <button type="button" class="btn btn-primary" style="float: right; margin: 10px; width: 130px; height: 40px;" onclick="AddProductBtn()">
+                  <i class="fa-solid fa-plus"></i> Add Product
+              </button>
+          </div>
+          <div class="alert alert-dismissible fade show PopupCategory" role="alert" style="display: none;" id="PopupAddproduct">
+              <div class="form-group">
+                  <label for="productName">Product Name:</label>
+                  <input type="text" class="form-control" id="productName" required>
+              </div>
+              <div class="form-group">
+                  <label for="productPrice">Price:</label>
+                  <input type="number" class="form-control" id="productPrice" required>
+              </div>
+              <div class="form-group">
+                  <label for="productQuantity">Quantity:</label>
+                  <input type="number" class="form-control" id="productQuantity" required>
+              </div>
+              <div class="form-group">
+                  <label for="productCategory">Category:</label>
+                  <input type="text" class="form-control" id="productCategory" required>
+              </div>
+              <div class="form-group1">
+                  <label for="productDescription">Description:</label>
+                  <input type="text" class="form-control" id="productDescription" required>
+              </div>
+              <button type="button" class="btn btn-primary" style="float: right; margin: 10px; display: block; width: 110px; height: 35px; padding: 5px;" id="addproduct" onclick="insertProductData()">Add Product</button>
+              <button type="button" class="btn btn-primary" style="float: right; margin: 10px; display: none; width: 110px; height: 35px; padding: 5px;" id="UpdateProduct" onclick="updateProduct()">Update Product</button>
+              <button type="button" class="btn btn-danger" style="float: right; margin: 10px;" onclick="AddProductBtn()">Cancel</button>
+          </div>
+      </div>
+      
+        <div class="container1 mt-5 containerCAt" id="ListProduct" style="display: none;">
+            <h2 class="text-center">List Product</h2><br>
+            <table class="table table-condensed">
+                <thead>
+                  <tr>
+                    <th>ProcutName</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>category</th>
+                    <th>Description</th>
+                    <Th>Action</Th>
+                  </tr>
+                </thead>
+                <tbody id="listProduct">
+
+                </tbody>
+              </table>
+        </div>
+        <div class="container1 mt-5" id="AddCategory" style="display: none;">
+          <h2 class="text-center">Add Category</h2>
+             <div class="BtnAdd">
+              <button type="button" class="btn btn-primary" style="float: right; margin: 10px; width: 130px; height: 40px;" onclick="PopupCategoryBtn()">
+                <i class="fa-solid fa-plus"></i>  Add Category</button>
+             </div>
+              <div class="alert alert-dismissible fade show PopupCategory" role="alert" style="display: none" id="PopupCategory">
+                <div class="form-group">
+                  <label for="usr">Category Id:</label>
+                  <input type="text" class="form-control" id="CategoryId" required>
+                </div>
+                <div class="form-group">
+                  <label for="pwd">Category Name</label>
+                  <input type="text" class="form-control" id="CategoryName" required>
+                </div>
+                <div class="form-group1">
+                  <label for="pwd">Description:</label>
+                  <input type="text" class="form-control" id="Description" required>
+                </div>
+                <button type="button" class="btn btn-primary" style="float: right; margin: 10px; display: block; width: 110px; height: 35px; padding: 5px;" onclick="insertCategoryData()" id="AddCategoryBTN">Add Category</button>  
+                <button type="button" class="btn btn-primary" style="float: right; margin: 10px; display: none; width: 110px; height: 35px; padding: 5px;" id="UpdateCategory" onclick="updateCategory()">Update Category</button>
+                <button type="button" class="btn btn-danger" style="float: right; margin: 10px;" onclick="PopupCategoryBtn()">Cancel</button> 
+              </div>
+        </div>
+        <div class="container1 mt-5 containerCAt" id="ListCategory" style="display:none">
+          <h2 class="text-center">List Category</h2><br>
+          <table class="table table-condensed">
+              <thead>
+                <tr>
+                  <th>Category ID</th>
+                  <th>Category Name</th>
+                  <th>Description</th>
+                  <Th>Action</Th>
+                </tr>
+              </thead>
+              <tbody id="listCatgory">
+
+              </tbody>
+            </table>
+      </div>
+        <div class="container1 mt-5" id="Orders" style="display: none;">
+            <h2 class="text-center">Add Order</h2>
+            <div class="BtnAdd">
+                <button type="button" class="btn btn-primary" style="float: right; margin: 10px; width: 130px; height: 40px;" onclick="PopupOrder()">
+                  <i class="fa-solid fa-plus"></i>  Add Order</button>
+            </div>
+
+        <div class="alert alert-dismissible fade show PopupCategory" role="alert" style="display: none;" id="PopupOrder">
+            <div class="form-group">
+                <label for="orderId">Order ID:</label>
+                <input type="text" class="form-control" id="orderId" required>
+            </div>
+            <div class="form-group">
+                <label for="orderCustomer">Customer Name:</label>
+                <input type="text" class="form-control" id="orderCustomer" required>
+            </div>
+            <div class="form-group">
+                <label for="orderDate">Order Date:</label>
+                <input type="date" class="form-control" id="orderDate" required>
+            </div>
+            <div class="form-group">
+                <label for="orderTotal">Total Amount:</label>
+                <input type="number" class="form-control" id="orderTotal" required>
+            </div>
+            <button type="button" class="btn btn-primary" style="float: right; margin: 10px; width: 110px; height: 35px; padding: 5px;" onclick="insertOrderData()" id="AddOrderBTN">Add Order</button>
+            <button type="button" class="btn btn-primary" style="float: right; margin: 10px; display: none; width: 110px; height: 35px; padding: 5px;" onclick="updateOrder()" id="UpdateOrder">Update Order</button>
+            <button type="button" class="btn btn-danger" style="float: right; margin: 10px;" onclick="PopupOrder()">Cancel</button>
+        </div>
+        <div class="container1 mt-5 containerCAt" id="ListOrders" style="display: block;">
+            <h2 class="text-center">List Orders</h2><br>
+            <table class="table table-condensed">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer Name</th>
+                        <th>Order Date</th>
+                        <th>Total Amount</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="listOrders">
+                    <!-- Orders will be dynamically populated here -->
+                </tbody>
+            </table>
+        </div>
+        <div class="container mt-5" id="Setting" style="display: none;">
+            <h2 class="text-center">Setting</h2>
+        </div>
+    </div>
+</div>      
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script>
+         const data = {
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    datasets: [{
+      label: "Sales Over Time",
+      data: [10, 20, 15, 30, 50, 40],
+      borderColor: "rgba(75, 192, 192, 1)",
+      backgroundColor: "rgba(75, 192, 192, 0.2)",
+      tension: 1 // Ensures the animation has an effect
+    }]
+  };
+
+  // Chart Configuration
+  const config = {
+    type: 'line',
+    data: data,
+    options: {
+      animations: {
+        tension: {
+          duration: 1000,
+          easing: 'linear',
+          from: 1,
+          to: 0,
+          loop: true
+        }
+      },
+      scales: {
+        y: {
+          min: 0,
+          max: 100
+        }
+      }
+    }
+  };
+
+  // Apply Chart to Canvas Inside .background1
+  const ctx = document.querySelector(".background1 canvas").getContext("2d");
+  new Chart(ctx, config);
+
+      </script>
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="./Data/menu.js"></script>
+    <script src="./Data/Insertcategory.js"></script>
+    <script src="./Data/insertData.js"></script>
+</body>
+
+</html>

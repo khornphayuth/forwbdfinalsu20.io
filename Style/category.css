@@ -1,0 +1,25 @@
+.PopupCategory{
+    overflow: hidden;
+    z-index: 100;
+    width: 100%;
+    animation: slideDown 0.4s ease-in-out;
+    background-color: rgba(187, 200, 211, 0.126);
+}
+@keyframes slideDown {
+    from {
+        transform: translateY(-5%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.containerCAt{
+    animation: slideDown 0.4s ease-in-out;
+}
+
+.BtnAdd{
+    width: 100%;
+    height: 50px;
+}

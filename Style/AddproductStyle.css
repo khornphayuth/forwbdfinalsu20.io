@@ -1,0 +1,31 @@
+/* #Addproduct{
+    background-color: pink;
+    font-size: 200px;
+    position: absolute;
+} */
+#Addproduct{
+    /* display: none; */
+}
+.container1{
+    box-shadow: 1px 1px 5px 1px rgb(116, 116, 116, 0.067);
+    overflow: hidden;
+    border-radius: 15px;
+    padding: 10px;
+    
+}
+.container1 .form-group{
+    float: left;
+    width: 48%;
+    margin: 10px;
+}
+.container1 .form-group1{
+    width: 98%;
+    margin: 10px;
+}
+.container1 .form-group1 input{
+    height: 150px;
+}
+.main{
+    /* background-color: pink; */
+    overflow: auto;
+}
