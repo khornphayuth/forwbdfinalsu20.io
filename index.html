@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="./Style/AddproductStyle.css">
     <link rel="stylesheet" href="./Style/category.css">
     <link rel="icon" href="./img/pngtree-test-orange-icon-sign-test-testing-vector-picture-image_9551097.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
@@ -21,7 +23,7 @@
         <aside id="sidebar">
             <div class="d-flex">
                 <button class="toggle-btn" type="button" onclick="btn()">
-                    <i class="lni lni-grid-alt"></i>
+                    <i class="fa-brands fa-slack"></i>
                 </button>
                 <div class="sidebar-logo">
                     <a href="#">Final Project</a>
@@ -52,7 +54,7 @@
                 <li class="sidebar-item">
                     <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
                         data-bs-target="#multi" aria-expanded="false" aria-controls="multi">
-                        <i class="lni lni-layout"></i>
+                        <i class="fa-solid fa-table-cells"></i>
                         <span>Category</span>
                     </a>
                     <ul id="multi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
@@ -67,7 +69,8 @@
                 <li class="sidebar-item">
                     <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
                         data-bs-target="#orderMenu" aria-expanded="false" aria-controls="orderMenu">
-                        <i class="lni lni-popup"></i>
+                    
+                        <i class="fa-solid fa-cart-shopping"></i>
                         <span>Orders</span>
                     </a>
                     <ul id="orderMenu" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
@@ -85,7 +88,7 @@
                 </li>
                 <li class="sidebar-item">
                     <a href="#" class="sidebar-link"  onclick="SettingBtn()">
-                        <i class="lni lni-cog"></i>
+                        <i class="fa-solid fa-gear"></i>
                         <span>Setting</span>
                     </a>
                 </li>
@@ -146,6 +149,7 @@
                                 <div class="amountProduct">
                                     <h1>200</h1>
                                     <p>User</p>
+                                    
                                 </div>
                             </div>
                     </div>
@@ -197,105 +201,108 @@
                 </div>
             </div>
         </div>
+        
 
         <div class="container1 mt-5" id="Addproduct" style="display: none;">
-          <h2 class="text-center">Add Product</h2>
-          <div class="BtnAdd">
-              <button type="button" class="btn btn-primary" style="float: right; margin: 10px; width: 130px; height: 40px;" onclick="AddProductBtn()">
-                  <i class="fa-solid fa-plus"></i> Add Product
-              </button>
-          </div>
-          <div class="alert alert-dismissible fade show PopupCategory" role="alert" style="display: none;" id="PopupAddproduct">
-              <div class="form-group">
-                  <label for="productName">Product Name:</label>
-                  <input type="text" class="form-control" id="productName" required>
-              </div>
-              <div class="form-group">
-                  <label for="productPrice">Price:</label>
-                  <input type="number" class="form-control" id="productPrice" required>
-              </div>
-              <div class="form-group">
-                  <label for="productQuantity">Quantity:</label>
-                  <input type="number" class="form-control" id="productQuantity" required>
-              </div>
-              <div class="form-group">
-                  <label for="productCategory">Category:</label>
-                  <input type="text" class="form-control" id="productCategory" required>
-              </div>
-              <div class="form-group1">
-                  <label for="productDescription">Description:</label>
-                  <input type="text" class="form-control" id="productDescription" required>
-              </div>
-              <button type="button" class="btn btn-primary" style="float: right; margin: 10px; display: block; width: 110px; height: 35px; padding: 5px;" id="addproduct" onclick="insertProductData()">Add Product</button>
-              <button type="button" class="btn btn-primary" style="float: right; margin: 10px; display: none; width: 110px; height: 35px; padding: 5px;" id="UpdateProduct" onclick="updateProduct()">Update Product</button>
-              <button type="button" class="btn btn-danger" style="float: right; margin: 10px;" onclick="AddProductBtn()">Cancel</button>
-          </div>
-      </div>
-      
-        <div class="container1 mt-5 containerCAt" id="ListProduct" style="display: none;">
-            <h2 class="text-center">List Product</h2><br>
-            <table class="table table-condensed">
-                <thead>
-                  <tr>
-                    <th>ProcutName</th>
-                    <th>Price</th>
-                    <th>Quantity</th>
-                    <th>category</th>
-                    <th>Description</th>
-                    <Th>Action</Th>
-                  </tr>
-                </thead>
-                <tbody id="listProduct">
-
-                </tbody>
-              </table>
-        </div>
-        <div class="container1 mt-5" id="AddCategory" style="display: none;">
-          <h2 class="text-center">Add Category</h2>
-             <div class="BtnAdd">
-              <button type="button" class="btn btn-primary" style="float: right; margin: 10px; width: 130px; height: 40px;" onclick="PopupCategoryBtn()">
-                <i class="fa-solid fa-plus"></i>  Add Category</button>
-             </div>
-              <div class="alert alert-dismissible fade show PopupCategory" role="alert" style="display: none" id="PopupCategory">
+            <h2 class="text-center">Add Product</h2>
+            <div class="BtnAdd">
+                <button type="button" class="btn btn-primary" style="float: right; margin: 10px; width: 130px; height: 40px;" onclick="AddProductBtn()">
+                    <i class="fa-solid fa-plus"></i> Add Product
+                </button>
+            </div>
+            <div class="alert alert-dismissible fade show PopupCategory" role="alert" style="display: none;" id="PopupAddproduct">
                 <div class="form-group">
-                  <label for="usr">Category Id:</label>
-                  <input type="text" class="form-control" id="CategoryId" required>
+                    <label for="productName">Product Name:</label>
+                    <input type="text" class="form-control" id="productName" required>
                 </div>
                 <div class="form-group">
-                  <label for="pwd">Category Name</label>
-                  <input type="text" class="form-control" id="CategoryName" required>
+                    <label for="productPrice">Price:</label>
+                    <input type="number" class="form-control" id="productPrice" required>
+                </div>
+                <div class="form-group">
+                    <label for="productQuantity">Quantity:</label>
+                    <input type="number" class="form-control" id="productQuantity" required>
+                </div>
+                <div class="form-group">
+                    <label for="productCategory">Category:</label>
+                    <input type="text" class="form-control" id="productCategory" required>
                 </div>
                 <div class="form-group1">
-                  <label for="pwd">Description:</label>
-                  <input type="text" class="form-control" id="Description" required>
+                    <label for="productDescription">Description:</label>
+                    <input type="text" class="form-control" id="productDescription" required>
                 </div>
-                <button type="button" class="btn btn-primary" style="float: right; margin: 10px; display: block; width: 110px; height: 35px; padding: 5px;" onclick="insertCategoryData()" id="AddCategoryBTN">Add Category</button>  
-                <button type="button" class="btn btn-primary" style="float: right; margin: 10px; display: none; width: 110px; height: 35px; padding: 5px;" id="UpdateCategory" onclick="updateCategory()">Update Category</button>
-                <button type="button" class="btn btn-danger" style="float: right; margin: 10px;" onclick="PopupCategoryBtn()">Cancel</button> 
-              </div>
+                <button type="button" class="btn btn-primary" style="float: right; margin: 10px; display: block; width: 110px; height: 35px; padding: 5px;" id="addproduct" onclick="insertProductData()">Add Product</button>
+                <button type="button" class="btn btn-primary" style="float: right; margin: 10px; display: none; width: 110px; height: 35px; padding: 5px;" id="UpdateProduct" onclick="updateProduct()">Update Product</button>
+                <button type="button" class="btn btn-danger" style="float: right; margin: 10px;" onclick="AddProductBtn()">Cancel</button>
+            </div>
         </div>
-        <div class="container1 mt-5 containerCAt" id="ListCategory" style="display:none">
-          <h2 class="text-center">List Category</h2><br>
-          <table class="table table-condensed">
-              <thead>
-                <tr>
-                  <th>Category ID</th>
-                  <th>Category Name</th>
-                  <th>Description</th>
-                  <Th>Action</Th>
-                </tr>
-              </thead>
-              <tbody id="listCatgory">
+        
+          <div class="container1 mt-5 containerCAt" id="ListProduct" style="display: none;">
+              <h2 class="text-center">List Product</h2><br>
+              <table class="table table-condensed">
+                  <thead>
+                    <tr>
+                      <th>ProcutName</th>
+                      <th>Price</th>
+                      <th>Quantity</th>
+                      <th>category</th>
+                      <th>Description</th>
+                      <Th>Action</Th>
+                    </tr>
+                  </thead>
+                  <tbody id="listProduct">
+                    
 
-              </tbody>
+                </tbody>
             </table>
       </div>
-        <div class="container1 mt-5" id="Orders" style="display: none;">
-            <h2 class="text-center">Add Order</h2>
-            <div class="BtnAdd">
-                <button type="button" class="btn btn-primary" style="float: right; margin: 10px; width: 130px; height: 40px;" onclick="PopupOrder()">
-                  <i class="fa-solid fa-plus"></i>  Add Order</button>
+      <div class="container1 mt-5" id="AddCategory" style="display: none;">
+        <h2 class="text-center">Add Category</h2>
+           <div class="BtnAdd">
+            <button type="button" class="btn btn-primary" style="float: right; margin: 10px; width: 130px; height: 40px;" onclick="PopupCategoryBtn()">
+              <i class="fa-solid fa-plus"></i>  Add Category</button>
+           </div>
+            <div class="alert alert-dismissible fade show PopupCategory" role="alert" style="display: none" id="PopupCategory">
+              <div class="form-group">
+                <label for="usr">Category Id:</label>
+                <input type="text" class="form-control" id="CategoryId" required>
+              </div>
+              <div class="form-group">
+                <label for="pwd">Category Name</label>
+                <input type="text" class="form-control" id="CategoryName" required>
+              </div>
+              <div class="form-group1">
+                <label for="pwd">Description:</label>
+                <input type="text" class="form-control" id="Description" required>
+              </div>
+              <button type="button" class="btn btn-primary" style="float: right; margin: 10px; display: block; width: 110px; height: 35px; padding: 5px;" onclick="insertCategoryData()" id="AddCategoryBTN">Add Category</button>  
+              <button type="button" class="btn btn-primary" style="float: right; margin: 10px; display: none; width: 110px; height: 35px; padding: 5px;" id="UpdateCategory" onclick="updateCategory()">Update Category</button>
+              <button type="button" class="btn btn-danger" style="float: right; margin: 10px;" onclick="PopupCategoryBtn()">Cancel</button> 
             </div>
+      </div>
+      <div class="container1 mt-5 containerCAt" id="ListCategory" style="display:none">
+        <h2 class="text-center">List Category</h2><br>
+        <table class="table table-condensed">
+            <thead>
+              <tr>
+                <th>Category ID</th>
+                <th>Category Name</th>
+                <th>Description</th>
+                <Th>Action</Th>
+              </tr>
+            </thead>
+            <tbody id="listCatgory">
+
+            </tbody>
+          </table>
+    </div>
+      <div class="container1 mt-5" id="Orders" style="display: none;">
+          <h2 class="text-center">Add Order</h2>
+          <div class="BtnAdd">
+              <button type="button" class="btn btn-primary" style="float: right; margin: 10px; width: 130px; height: 40px;" onclick="PopupOrder()">
+                <i class="fa-solid fa-plus"></i>  Add Order</button>
+          </div>
+          
 
         <div class="alert alert-dismissible fade show PopupCategory" role="alert" style="display: none;" id="PopupOrder">
             <div class="form-group">
